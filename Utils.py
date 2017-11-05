@@ -64,7 +64,7 @@ def tree_print(name, thing, indent=0):
 			continue
 
 		if left == 0:
-			indent_print(indent,"└", key, ": ", value)
+			indent_print(indent,"└─", key, ": ", value)
 		else:
-			indent_print(indent,"├", key, ": ", value)
+			indent_print(indent,"├─", key, ": ", value)
 
