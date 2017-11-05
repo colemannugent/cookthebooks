@@ -21,6 +21,7 @@ class Split:
 		print("-->account:", self.account)
 		print("-->slots:", self.slots)
 
+# Fix parsing for slots
 def parse_split(xml_split):
 		return Split(safety_text(xml_split.find('split:id', ns)),
 				safety_text(xml_split.find('split:memo', ns)),

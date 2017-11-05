@@ -5,6 +5,7 @@ import sys
 import xml.etree.ElementTree as ET
 
 from Split import *
+from Account import *
 from Utils import *
 
 # Create our argument parser object
@@ -34,3 +35,9 @@ for transaction in root.iterfind('gnc:book/gnc:transaction', ns):
 		temp = parse_split(split)
 		temp.display()
 		print()
+
+# iterate through all accounts
+for account in root.iterfind('gnc:book/gnc:account', ns):
+	temp = parse_account(account)
+	temp.display()
+	print()
