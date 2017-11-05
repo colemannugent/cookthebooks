@@ -12,14 +12,7 @@ class Account:
 		self.parent = parent
 
 	def display(self):
-		print("Account:", self.guid)
-		print("-->name:", self.name)
-		print("-->account_type:", self.account_type)
-		print("-->commodity:", self.commodity)
-		print("-->commodity-scu:", self.commodity_scu)
-		print("-->description:", self.description)
-		print("-->slots:", self.slots)
-		print("-->parent:", self.parent)
+		tree_print("Account", self, 0)
 
 # TODO: Fix parsing for slots, commodity
 def parse_account(xml_account):

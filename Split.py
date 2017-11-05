@@ -12,14 +12,7 @@ class Split:
 		self.slots = slots
 
 	def display(self):
-		print("split:", self.guid)
-		print("-->memo:", self.memo)
-		print("-->reconciled-state:", self.reconciledstate)
-		print("-->reconcile-date:", self.reconciledate)
-		print("-->value:", self.value)
-		print("-->quantity:", self.quantity)
-		print("-->account:", self.account)
-		print("-->slots:", self.slots)
+		tree_print("Split", self, 0)
 
 # Fix parsing for slots
 def parse_split(xml_split):

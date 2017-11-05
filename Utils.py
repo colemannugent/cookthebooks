@@ -36,3 +36,35 @@ def safety_text(element):
 		return element.text
 	else:
 		return None
+
+# Prints with a certain level of indentation in front of it
+def indent_print(*arg):
+	prefix = ""
+	count = arg[0]
+	while count > 0:
+		prefix += "\t"
+		count -= 1
+
+	print(prefix, end="")
+
+	for part in arg[1:]:
+		print(part, end="")
+
+	print()
+
+# Print a very pretty representation of an object
+def tree_print(name, thing, indent=0):
+	indent_print(indent, name, ":")
+
+	left = len(thing.__dict__)
+
+	for key, value in thing.__dict__.items():
+		left -= 1
+		if value == '\n    ':
+			continue
+
+		if left == 0:
+			indent_print(indent,"└", key, ": ", value)
+		else:
+			indent_print(indent,"├", key, ": ", value)
+
