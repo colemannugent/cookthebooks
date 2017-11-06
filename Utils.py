@@ -42,7 +42,7 @@ def indent_print(*arg):
 	prefix = ""
 	count = arg[0]
 	while count > 0:
-		prefix += "\t"
+		prefix += "│\t"
 		count -= 1
 
 	print(prefix, end="")
@@ -54,7 +54,10 @@ def indent_print(*arg):
 
 # Print a very pretty representation of an object
 def tree_print(name, thing, indent=0):
-	indent_print(indent, name, ":")
+	if indent == 0:
+		indent_print(indent, name, ":")
+	else:
+		indent_print(indent - 1, "├───────┬", name, ":")
 
 	left = len(thing.__dict__)
 
@@ -67,7 +70,7 @@ def tree_print(name, thing, indent=0):
 				tree_print("child", subelement, indent + 1)
 		else:
 			left -= 1
-			if left == 0:
+			if left == 1:
 				indent_print(indent,"└─", key, ": ", value)
 			else:
 				indent_print(indent,"├─", key, ": ", value)
