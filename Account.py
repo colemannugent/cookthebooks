@@ -11,7 +11,7 @@ class Account:
 		self.slots = slots
 		self.parent = parent
 		self.children = []
-		self.fullname = ""
+		self.fullname = None
 
 	def display(self):
 		tree_print("Account", self, 0)
@@ -37,4 +37,9 @@ def get_fullname(account, accounts):
 	if account.parent is None:
 		return account.name
 	else:
-		return (get_fullname(lookup_account(account.parent, accounts), accounts) + ":" + account.name)
+		parent_account = lookup_account(account.parent, accounts)
+		# Check to see if parent already has a fullname and simply append to that
+		if parent_account.fullname is None:
+			return (get_fullname(parent_account, accounts) + ":" + account.name)
+		else:
+			return (parent_account.fullname + ":" + account.name)
