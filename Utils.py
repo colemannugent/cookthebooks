@@ -59,12 +59,13 @@ def tree_print(name, thing, indent=0):
 	left = len(thing.__dict__)
 
 	for key, value in thing.__dict__.items():
-		left -= 1
-		if value == '\n    ':
-			continue
-
-		if left == 0:
-			indent_print(indent,"└─", key, ": ", value)
+		if key == "splits":
+			for subelement in value:
+				tree_print("split", subelement, indent + 1)
 		else:
-			indent_print(indent,"├─", key, ": ", value)
+			left -= 1
+			if left == 0:
+				indent_print(indent,"└─", key, ": ", value)
+			else:
+				indent_print(indent,"├─", key, ": ", value)
 
