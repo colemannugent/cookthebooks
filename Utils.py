@@ -62,6 +62,9 @@ def tree_print(name, thing, indent=0):
 		if key == "splits":
 			for subelement in value:
 				tree_print("split", subelement, indent + 1)
+		elif key == "children":
+			for subelement in value:
+				tree_print("child", subelement, indent + 1)
 		else:
 			left -= 1
 			if left == 0:
