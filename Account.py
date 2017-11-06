@@ -10,6 +10,7 @@ class Account:
 		self.description = description
 		self.slots = slots
 		self.parent = parent
+		self.children = []
 
 	def display(self):
 		tree_print("Account", self, 0)
@@ -24,3 +25,9 @@ def parse_account(xml_account):
 			safety_text(xml_account.find('act:description', ns)),
 			safety_text(xml_account.find('act:slots', ns)),
 			safety_text(xml_account.find('act:parent', ns)))
+
+def lookup_account(guid, accounts):
+	for account in accounts:
+		if account.guid == guid:
+			return account
+	return None
