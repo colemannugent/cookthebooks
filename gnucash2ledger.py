@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 
 from Split import *
 from Account import *
+from Transaction import *
 from Utils import *
 
 # Create our argument parser object
@@ -29,15 +30,23 @@ print("File:", args.file)
 tree = ET.parse(args.file)
 root = tree.getroot()
 
-# iterate through all transactions
-for transaction in root.iterfind('gnc:book/gnc:transaction', ns):
-	for split in transaction.find('trn:splits', ns).iterfind('trn:split', ns):
-		temp = parse_split(split)
-		temp.display()
-		print()
-
 # iterate through all accounts
 for account in root.iterfind('gnc:book/gnc:account', ns):
 	temp = parse_account(account)
 	temp.display()
 	print()
+
+# iterate through all transactions
+for transaction in root.iterfind('gnc:book/gnc:transaction', ns):
+	temp = parse_transaction(transaction)
+	temp.display()
+	print()
+
+# TODO:
+# Iterate through all accounts
+#	- Generate a list of Account objects
+#	- Be able to translate guids to account names
+# Sort transactions by time
+#	- Which time? 
+# Start building translation layer to ledger format
+#	- Identify main parts of ledger format
