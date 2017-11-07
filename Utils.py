@@ -39,6 +39,12 @@ def safety_text(element):
 		# special meaning in the ledger format
 		temp = temp.replace(']', ')')
 		temp = temp.replace('[', '(')
+
+		# Also replace all newlines with spaces since they will cause
+		# an entry not to balance
+		temp = temp.replace('\r\n', ' ')
+		temp = temp.replace('\r', ' ')
+		temp = temp.replace('\n', ' ')
 		return temp
 	else:
 		return None
