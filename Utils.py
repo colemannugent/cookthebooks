@@ -1,3 +1,5 @@
+import sys
+
 # Define our XML namespaces for easy translation
 ns = {  'gnc': 'http://www.gnucash.org/XML/gnc',
 	'act': 'http://www.gnucash.org/XML/act',
@@ -29,19 +31,31 @@ ns = {  'gnc': 'http://www.gnucash.org/XML/gnc',
 	'tte': 'http://www.gnucash.org/XML/tte',
 	'vendor': 'http://www.gnucash.org/XML/vendor'}
 
-# Check to see if an element has a text attribute. If the element does have a
-# text attribute, return it, else return none
+# Wrap print with the ability to output to stderr or a file
+def output(*args, error=False, outfile=None):
+	# Catch any BrokenPipeErrors if the other end of the output pipe breaks
+	try:
+		if error:
+			print(*args, file=sys.stderr)
+		else:
+			if outfile:
+				temp_file = open(outfile, "a")
+				print(*args, file=temp_file)
+			else:
+				print(*args)
+	except BrokenPipeError:
+		pass
+
+# Check to see if an element has a text attribute. If the element does have a text attribute, return it, else return none
 def safety_text(element):
 	if hasattr(element, 'text'):
 		temp = element.text
 
-		# Make sure that the text does not contain braces as these have
-		# special meaning in the ledger format
+		# Make sure that the text does not contain braces as these have special meaning in the ledger format
 		temp = temp.replace(']', ')')
 		temp = temp.replace('[', '(')
 
-		# Also replace all newlines with spaces since they will cause
-		# an entry not to balance
+		# Also replace all newlines with spaces since they will cause an entry not to balance
 		temp = temp.replace('\r\n', ' ')
 		temp = temp.replace('\r', ' ')
 		temp = temp.replace('\n', ' ')
@@ -53,16 +67,17 @@ def safety_text(element):
 def indent_print(*arg):
 	prefix = ""
 	count = arg[0]
+
 	while count > 0:
 		prefix += "│\t"
 		count -= 1
 
-	print(prefix, end="")
+	output(prefix, end="")
 
 	for part in arg[1:]:
-		print(part, end="")
+		output(part, end="")
 
-	print()
+	output()
 
 # Print a very pretty representation of an object
 def tree_print(name, thing, indent=0):

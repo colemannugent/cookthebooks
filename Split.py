@@ -11,7 +11,7 @@ class Split:
 	def display(self):
 		tree_print("Split", self, 0)
 
-# Fix parsing for slots
+# Given an XML split tag create a Split object
 def parse_split(xml_split):
 		return Split(safety_text(xml_split.find('split:memo', ns)),
 				safety_text(xml_split.find('split:value', ns)),
