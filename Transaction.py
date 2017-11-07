@@ -18,13 +18,11 @@ from Split import *
 from Account import *
 
 class Transaction:
-	def __init__(self, guid, currency, date_posted, date_entered, description, slots, splits):
+	def __init__(self, guid, currency, date_posted, description, splits):
 		self.guid = guid
 		self.currency = currency
 		self.date_posted = date_posted
-		self.date_entered = date_entered
 		self.description = description
-		self.slots = slots
 		self.splits = splits
 		self.date = None
 
@@ -41,9 +39,7 @@ def parse_transaction(xml_transaction):
 	return Transaction(safety_text(xml_transaction.find('trn:id', ns)),
 			safety_text(xml_transaction.find('trn:currency/cmdty:id', ns)),
 			safety_text(xml_transaction.find('trn:date-posted/ts:date', ns)),
-			safety_text(xml_transaction.find('trn:date-entered/ts:date', ns)),
 			safety_text(xml_transaction.find('trn:description', ns)),
-			xml_transaction.findall('trn:slots/slot', ns),
 			splits)
 
 # Given a string representing the fractional quanity and the currency, return a
@@ -74,5 +70,8 @@ def translate_to_ledger(transaction, accounts):
 		name = get_fullname(lookup_account(split.account, accounts), accounts)
 		quantity = translate_quantity(split.quantity, transaction.currency)
 
-		print('{0:<{width}} {1:>10}'.format(name, quantity, width=length))
+		if split.memo:
+			print('  {0:<{width}} {1:>10} ;{2}'.format(name, quantity, split.memo, width=length))
+		else:
+			print('  {0:<{width}} {1:>10}'.format(name, quantity, width=length))
 	print()
