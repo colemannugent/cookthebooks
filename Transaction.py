@@ -10,6 +10,7 @@ class Transaction:
 		self.description = description
 		self.slots = slots
 		self.splits = splits
+		self.date = None
 
 	def display(self):
 		tree_print("Transaction", self, 0)
@@ -26,5 +27,5 @@ def parse_transaction(xml_transaction):
 			safety_text(xml_transaction.find('trn:date-posted/ts:date', ns)),
 			safety_text(xml_transaction.find('trn:date-entered/ts:date', ns)),
 			safety_text(xml_transaction.find('trn:description', ns)),
-			safety_text(xml_transaction.find('trn:slots', ns)),
+			xml_transaction.findall('trn:slots/slot', ns),
 			splits)
