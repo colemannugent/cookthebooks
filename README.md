@@ -38,3 +38,5 @@ optional arguments:
 	- Maybe even have a command line switch to show the contents of the root account
 - Check type of account (bank, expense, income) to determine the sign of the entry
 	- There might be info in the XML account about the type
+- Create a test suite of a few gnucash files
+- Add screenshots or maybe a video
