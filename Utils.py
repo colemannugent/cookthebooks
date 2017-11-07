@@ -33,7 +33,13 @@ ns = {  'gnc': 'http://www.gnucash.org/XML/gnc',
 # text attribute, return it, else return none
 def safety_text(element):
 	if hasattr(element, 'text'):
-		return element.text
+		temp = element.text
+
+		# Make sure that the text does not contain braces as these have
+		# special meaning in the ledger format
+		temp = temp.replace(']', ')')
+		temp = temp.replace('[', '(')
+		return temp
 	else:
 		return None
 
