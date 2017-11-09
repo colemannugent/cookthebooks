@@ -1,6 +1,8 @@
 import math
 from decimal import *
 
+from Utils import *
+
 # Attempt to import the money library
 translate_currency_codes = True
 try:
