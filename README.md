@@ -1,10 +1,10 @@
-# gnucash2ledger
+# cookthebooks
 
 Quickly translate gnucash files to ledger format. Translates a gnucash file with over 500 transactions in around .3 seconds on a modern machine.
 
 ## Usage
 ```
-usage: gnucash2ledger.py [-h] [-o OUTFILE] file
+usage: cookthebooks.py [-h] [-o OUTFILE] file
 
 Convert gnucash files to ledger files
 
