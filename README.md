@@ -1,18 +1,25 @@
 # cookthebooks
 
-Quickly translate gnucash files to ledger format. Translates a gnucash file with over 500 transactions in around .3 seconds on a modern machine.
+Simple Python3 program to quickly translate gnucash files to ledger format. Translates a gnucash file with over 500 transactions in around .3 seconds on a modern machine.
 
-To get started:
+## Getting Started
+Install the optional dependency for conversion of currency codes to Unicode currency symbols, e.g. GBP becomes £.
+
 ```
 $ sudo python3 -m pip install money
+```
+
+Then clone the git repo:
+```
 $ git clone https://github.com/colemannugent/cookthebooks
 $ cd cookthebooks/
 ```
 
 Then all you need to is:
 ```
-$ ./cookthebooks.py ~/path/to/your/file.gnucash
+$ ./cookthebooks.py /path/to/your/file.gnucash
 ```
+By default the program will output all of the converted ledger syntax to STDOUT and all errors or other messages to STDERR for easy redirection to files or other programs.
 
 Note that this program may not work with all versions of GnuCash as there is no published information about the structure of the GnuCash files (that I can find anyway). It works beautifully on my Arch Linux machine running GnuCash 2.7.1.
 
