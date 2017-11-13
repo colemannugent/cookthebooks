@@ -30,11 +30,18 @@ def lookup_account(guid, accounts):
 # Recursively build a full name for the account using the name of its parent
 def get_fullname(account, accounts):
 	if account.parent is None:
-		return account.name
+		return None
 	else:
 		parent_account = lookup_account(account.parent, accounts)
 		# Check to see if parent already has a fullname and simply append to that
 		if parent_account.fullname is None:
-			return (get_fullname(parent_account, accounts) + ":" + account.name)
+
+			parent_fullname = get_fullname(parent_account, accounts)
+
+			# If the parent's fullname is None, then the parent is the root account
+			if parent_fullname is None:
+				return account.name
+			else:
+				return (parent_fullname + ":" + account.name)
 		else:
 			return (parent_account.fullname + ":" + account.name)
