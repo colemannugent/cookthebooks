@@ -1,6 +1,8 @@
 # cookthebooks
 
-Simple Python3 program to quickly translate gnucash files to ledger format. Translates a gnucash file with over 500 transactions in around .3 seconds on a modern machine.
+Simple Python3 program to quickly translate GNUCash files to ledger format. Translates a GNUCash file with over 500 transactions in around .3 seconds on a modern machine.
+
+![Example](./docs/img/sample.png)
 
 ## Getting Started
 Install the optional dependency for conversion of currency codes to Unicode currency symbols, e.g. GBP becomes £.
@@ -39,14 +41,13 @@ optional arguments:
 ```
 
 ## Implemented
-- Basic tranlation from the gnucash format to the ledger format
+- Basic tranlation from the GNUCash format to the ledger format
 - Memo lines for splits are preserved as comments
 - Unicode currency symbol support
 
 ## Not Yet Implemented
 - Scheduled transactions
 - Budgets
-- Slot parsing for splits
 - Cleared transactions
 
 ## Dependencies
@@ -57,7 +58,5 @@ optional arguments:
 - Pre-generate accounts at top of ledger file and impose assertions: http://ledger-cli.org/3.0/doc/ledger3.html#Command-Directives
 - Talk about the display() function in the documentation
 	- Maybe even have a command line switch to show the contents of the root account
-- Check type of account (bank, expense, income) to determine the sign of the entry
-	- There might be info in the XML account about the type
-- Create a test suite of a few gnucash files
-- Add screenshots or maybe a video
+- Actual documentation
+- Support for reverse direction conversions from ledger to GNUCash format
