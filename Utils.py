@@ -1,4 +1,5 @@
 import sys
+import os
 
 # Define our XML namespaces for easy translation
 ns = {  'gnc': 'http://www.gnucash.org/XML/gnc',
@@ -32,7 +33,7 @@ ns = {  'gnc': 'http://www.gnucash.org/XML/gnc',
 	'vendor': 'http://www.gnucash.org/XML/vendor'}
 
 # Wrap print with the ability to output to stderr or a file
-def output(*args, error=False, outfile=None):
+def output(*args, error=False, outfile=None, ending=os.linesep):
 	# Catch any BrokenPipeErrors if the other end of the output pipe breaks
 	try:
 		if error:
@@ -40,9 +41,9 @@ def output(*args, error=False, outfile=None):
 		else:
 			if outfile:
 				temp_file = open(outfile, "a")
-				print(*args, file=temp_file)
+				print(*args, file=temp_file, end=ending)
 			else:
-				print(*args)
+				print(*args, end=ending)
 	except BrokenPipeError:
 		pass
 
@@ -72,10 +73,10 @@ def indent_print(*arg):
 		prefix += "│\t"
 		count -= 1
 
-	output(prefix, end="")
+	output(prefix, ending="")
 
 	for part in arg[1:]:
-		output(part, end="")
+		output(part, ending="")
 
 	output()
 
