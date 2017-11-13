@@ -74,6 +74,8 @@ for transaction in root.iterfind('gnc:book/gnc:transaction', ns):
 
 	transactions.append(temp)
 
+output("Found", len(transactions), "transactions", error=True)
+
 # Sort transactions by date
 # Note that if two transactions have the same date we rely on gnucash keeping them
 # in the correct order as there is no way to tell which transaction came first
