@@ -50,17 +50,20 @@ def output(*args, error=False, outfile=None, ending=os.linesep):
 # Check to see if an element has a text attribute. If the element does have a text attribute, return it, else return none
 def safety_text(element):
 	if hasattr(element, 'text'):
-		temp = element.text
+		if element.text is None:
+			return ""
+		else:
+			temp = element.text
 
-		# Make sure that the text does not contain braces as these have special meaning in the ledger format
-		temp = temp.replace(']', ')')
-		temp = temp.replace('[', '(')
+			# Make sure that the text does not contain braces as these have special meaning in the ledger format
+			temp = temp.replace(']', ')')
+			temp = temp.replace('[', '(')
 
-		# Also replace all newlines with spaces since they will cause an entry not to balance
-		temp = temp.replace('\r\n', ' ')
-		temp = temp.replace('\r', ' ')
-		temp = temp.replace('\n', ' ')
-		return temp
+			# Also replace all newlines with spaces since they will cause an entry not to balance
+			temp = temp.replace('\r\n', ' ')
+			temp = temp.replace('\r', ' ')
+			temp = temp.replace('\n', ' ')
+			return temp
 	else:
 		return None
 
