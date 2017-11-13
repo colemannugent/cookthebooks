@@ -1,0 +1,1785 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gnc-v2
+     xmlns:gnc="http://www.gnucash.org/XML/gnc"
+     xmlns:act="http://www.gnucash.org/XML/act"
+     xmlns:book="http://www.gnucash.org/XML/book"
+     xmlns:cd="http://www.gnucash.org/XML/cd"
+     xmlns:cmdty="http://www.gnucash.org/XML/cmdty"
+     xmlns:price="http://www.gnucash.org/XML/price"
+     xmlns:slot="http://www.gnucash.org/XML/slot"
+     xmlns:split="http://www.gnucash.org/XML/split"
+     xmlns:sx="http://www.gnucash.org/XML/sx"
+     xmlns:trn="http://www.gnucash.org/XML/trn"
+     xmlns:ts="http://www.gnucash.org/XML/ts"
+     xmlns:fs="http://www.gnucash.org/XML/fs"
+     xmlns:bgt="http://www.gnucash.org/XML/bgt"
+     xmlns:recurrence="http://www.gnucash.org/XML/recurrence"
+     xmlns:lot="http://www.gnucash.org/XML/lot"
+     xmlns:addr="http://www.gnucash.org/XML/addr"
+     xmlns:billterm="http://www.gnucash.org/XML/billterm"
+     xmlns:bt-days="http://www.gnucash.org/XML/bt-days"
+     xmlns:bt-prox="http://www.gnucash.org/XML/bt-prox"
+     xmlns:cust="http://www.gnucash.org/XML/cust"
+     xmlns:employee="http://www.gnucash.org/XML/employee"
+     xmlns:entry="http://www.gnucash.org/XML/entry"
+     xmlns:invoice="http://www.gnucash.org/XML/invoice"
+     xmlns:job="http://www.gnucash.org/XML/job"
+     xmlns:order="http://www.gnucash.org/XML/order"
+     xmlns:owner="http://www.gnucash.org/XML/owner"
+     xmlns:taxtable="http://www.gnucash.org/XML/taxtable"
+     xmlns:tte="http://www.gnucash.org/XML/tte"
+     xmlns:vendor="http://www.gnucash.org/XML/vendor">
+<gnc:count-data cd:type="book">1</gnc:count-data>
+<gnc:book version="2.0.0">
+<book:id type="guid">5eec7796483799e6e4a611783174dba3</book:id>
+<book:slots>
+  <slot>
+    <slot:key>changed-bayesian-to-guid</slot:key>
+    <slot:value type="string">true</slot:value>
+  </slot>
+</book:slots>
+<gnc:count-data cd:type="commodity">3</gnc:count-data>
+<gnc:count-data cd:type="account">28</gnc:count-data>
+<gnc:count-data cd:type="transaction">25</gnc:count-data>
+<gnc:count-data cd:type="price">14</gnc:count-data>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>CURRENCY</cmdty:space>
+  <cmdty:id>USD</cmdty:id>
+  <cmdty:get_quotes/>
+  <cmdty:quote_source>currency</cmdty:quote_source>
+  <cmdty:quote_tz/>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>NASDAQ</cmdty:space>
+  <cmdty:id>AMZN</cmdty:id>
+  <cmdty:name>Amazon.com</cmdty:name>
+  <cmdty:fraction>10000</cmdty:fraction>
+  <cmdty:get_quotes/>
+  <cmdty:quote_source>yahoo</cmdty:quote_source>
+  <cmdty:quote_tz/>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>NASDAQ</cmdty:space>
+  <cmdty:id>IBM</cmdty:id>
+  <cmdty:name>IBM</cmdty:name>
+  <cmdty:fraction>10000</cmdty:fraction>
+  <cmdty:get_quotes/>
+  <cmdty:quote_source>yahoo</cmdty:quote_source>
+  <cmdty:quote_tz/>
+</gnc:commodity>
+<gnc:commodity version="2.0.0">
+  <cmdty:space>template</cmdty:space>
+  <cmdty:id>template</cmdty:id>
+  <cmdty:name>template</cmdty:name>
+  <cmdty:xcode>template</cmdty:xcode>
+  <cmdty:fraction>1</cmdty:fraction>
+</gnc:commodity>
+<gnc:pricedb version="1">
+  <price>
+    <price:id type="guid">41da22075e8615fb17e961a19ee8215e</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-03-12 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>3599/100</price:value>
+  </price>
+  <price>
+    <price:id type="guid">97c751d98d9689793a3ef1cb4b765a65</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-03-05 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>1811/50</price:value>
+  </price>
+  <price>
+    <price:id type="guid">17fd5902614a2e1660b3f7b0d138275d</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-02-26 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>3721/100</price:value>
+  </price>
+  <price>
+    <price:id type="guid">fc118c0a82969a997cfba63d476bd87f</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-02-20 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>767/20</price:value>
+  </price>
+  <price>
+    <price:id type="guid">f2a41119e39af86738bb7840526e59a4</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-02-12 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>3919/100</price:value>
+  </price>
+  <price>
+    <price:id type="guid">180839653284fbb8bbe8d51755472511</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-02-05 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>963/25</price:value>
+  </price>
+  <price>
+    <price:id type="guid">a7ab727bff22129c5bc6b617d7d5cd04</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-01-29 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>3833/100</price:value>
+  </price>
+  <price>
+    <price:id type="guid">e83004b748907945af36c097d97cc6d8</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-01-22 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>2261/50</price:value>
+  </price>
+  <price>
+    <price:id type="guid">a26363c9a04f64c6294517f027f6a2ee</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-01-16 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>1098/25</price:value>
+  </price>
+  <price>
+    <price:id type="guid">908eb3c0460f9d105b7596e61b04eddc</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-01-08 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>222/5</price:value>
+  </price>
+  <price>
+    <price:id type="guid">b872b00130d2d3f9d7f3bc3b58ae492c</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-01-02 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>4787/100</price:value>
+  </price>
+  <price>
+    <price:id type="guid">4265db36cb45a682878637c1d737541a</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>AMZN</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2004-12-29 15:00:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price-editor</price:source>
+    <price:type>last</price:type>
+    <price:value>81/2</price:value>
+  </price>
+  <price>
+    <price:id type="guid">30b8449708e27634a42ec695e20e9153</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>IBM</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2013-12-13 06:01:00 -0800</ts:date>
+    </price:time>
+    <price:source>Finance::Quote</price:source>
+    <price:type>last</price:type>
+    <price:value>172800000/1000000</price:value>
+  </price>
+  <price>
+    <price:id type="guid">d4526d15c4e6444f82f93dbc75311dcb</price:id>
+    <price:commodity>
+      <cmdty:space>NASDAQ</cmdty:space>
+      <cmdty:id>IBM</cmdty:id>
+    </price:commodity>
+    <price:currency>
+      <cmdty:space>CURRENCY</cmdty:space>
+      <cmdty:id>USD</cmdty:id>
+    </price:currency>
+    <price:time>
+      <ts:date>2005-03-01 02:59:00 -0800</ts:date>
+    </price:time>
+    <price:source>user:price</price:source>
+    <price:value>96600157/1000000</price:value>
+  </price>
+</gnc:pricedb>
+<gnc:account version="2.0.0">
+  <act:name>Root Account</act:name>
+  <act:id type="guid">d99afa236d85f45abdd0f508798c9304</act:id>
+  <act:type>ROOT</act:type>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Assets</act:name>
+  <act:id type="guid">8eab4ac7fd92264e901eda8af563f842</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Assets</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>placeholder</slot:key>
+      <slot:value type="string">true</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">d99afa236d85f45abdd0f508798c9304</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Investments</act:name>
+  <act:id type="guid">1873c3e1cf6936c03eefed922c4cebf8</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Investments</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>placeholder</slot:key>
+      <slot:value type="string">true</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8eab4ac7fd92264e901eda8af563f842</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Brokerage Account</act:name>
+  <act:id type="guid">32a6e78d9fa476a7ad0e5fb797696bac</act:id>
+  <act:type>BANK</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Brokerage Account</act:description>
+  <act:parent type="guid">1873c3e1cf6936c03eefed922c4cebf8</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bond</act:name>
+  <act:id type="guid">dfaa4c436bc5eeafa2c2048f5f0feedb</act:id>
+  <act:type>STOCK</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Bond</act:description>
+  <act:parent type="guid">32a6e78d9fa476a7ad0e5fb797696bac</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Stock</act:name>
+  <act:id type="guid">1a0f182a66248f309fc06abbb6899272</act:id>
+  <act:type>STOCK</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Stock</act:description>
+  <act:parent type="guid">32a6e78d9fa476a7ad0e5fb797696bac</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>AMZN</act:name>
+  <act:id type="guid">a9d4880fbc9925eea4affb883c6e33da</act:id>
+  <act:type>STOCK</act:type>
+  <act:commodity>
+    <cmdty:space>NASDAQ</cmdty:space>
+    <cmdty:id>AMZN</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>10000</act:commodity-scu>
+  <act:description>Amazon.com</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">1a0f182a66248f309fc06abbb6899272</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>IBM</act:name>
+  <act:id type="guid">de3531065d28505c212ee223bda116aa</act:id>
+  <act:type>STOCK</act:type>
+  <act:commodity>
+    <cmdty:space>NASDAQ</cmdty:space>
+    <cmdty:id>IBM</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>10000</act:commodity-scu>
+  <act:description>IBM stocks</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">1a0f182a66248f309fc06abbb6899272</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Market Index</act:name>
+  <act:id type="guid">de9798db403316de49f976590744350e</act:id>
+  <act:type>MUTUAL</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Market Index</act:description>
+  <act:parent type="guid">32a6e78d9fa476a7ad0e5fb797696bac</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Mutual Fund</act:name>
+  <act:id type="guid">3ba3f258b16122ea16883a67221d9f64</act:id>
+  <act:type>MUTUAL</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Mutual Fund</act:description>
+  <act:parent type="guid">32a6e78d9fa476a7ad0e5fb797696bac</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bank ABC</act:name>
+  <act:id type="guid">d16675160498eb6e7098073486d4ac90</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">8eab4ac7fd92264e901eda8af563f842</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>CD</act:name>
+  <act:id type="guid">c93de6e4c06972b1565e37b6d8b27e34</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>6 month CD @ 2%</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">d16675160498eb6e7098073486d4ac90</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Savings</act:name>
+  <act:id type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</act:id>
+  <act:type>ASSET</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Savings @ 1%</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">d16675160498eb6e7098073486d4ac90</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Income</act:name>
+  <act:id type="guid">6a56c54447ee67e4ba11881574c94ecb</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Income</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>placeholder</slot:key>
+      <slot:value type="string">true</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">d99afa236d85f45abdd0f508798c9304</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Dividend Income</act:name>
+  <act:id type="guid">0dbb80665c4de33f8c25549e8245d1fb</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Dividend Income</act:description>
+  <act:parent type="guid">6a56c54447ee67e4ba11881574c94ecb</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Interest Income</act:name>
+  <act:id type="guid">c3d8c65713715b652e1c1e70005dc34c</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Interest Income</act:description>
+  <act:parent type="guid">6a56c54447ee67e4ba11881574c94ecb</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bond Interest</act:name>
+  <act:id type="guid">ca1a9001a03e2b1efcfbd3905f2edbb5</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Bond Interest</act:description>
+  <act:parent type="guid">c3d8c65713715b652e1c1e70005dc34c</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>CD</act:name>
+  <act:id type="guid">3f06ed2ecfbbf86822c84be472b23d59</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>6 month CD interest</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">c3d8c65713715b652e1c1e70005dc34c</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Savings</act:name>
+  <act:id type="guid">73c88866a9713f4d852208bebbcd3f49</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Interest on savings - Bank ABC</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">c3d8c65713715b652e1c1e70005dc34c</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Cap Gain (Long)</act:name>
+  <act:id type="guid">5f2203ea7a58f3b862049ee5ae189dbf</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">6a56c54447ee67e4ba11881574c94ecb</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>AMZN</act:name>
+  <act:id type="guid">d341a012bef88b9e5e695be7eeefc053</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5f2203ea7a58f3b862049ee5ae189dbf</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>IBM</act:name>
+  <act:id type="guid">aa3e22d3a41377cc8c96619fedb6800f</act:id>
+  <act:type>INCOME</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">5f2203ea7a58f3b862049ee5ae189dbf</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Expenses</act:name>
+  <act:id type="guid">96bff9b15a7af0c83fe2227e43d3ea19</act:id>
+  <act:type>EXPENSE</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Expenses</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>placeholder</slot:key>
+      <slot:value type="string">true</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">d99afa236d85f45abdd0f508798c9304</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Commissions</act:name>
+  <act:id type="guid">09b82aa022c0421d609f3e681825741d</act:id>
+  <act:type>EXPENSE</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Commissions</act:description>
+  <act:parent type="guid">96bff9b15a7af0c83fe2227e43d3ea19</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Bank ABC</act:name>
+  <act:id type="guid">9c388db8647472a2e47b144fce8f5db1</act:id>
+  <act:type>EXPENSE</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">96bff9b15a7af0c83fe2227e43d3ea19</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Charges</act:name>
+  <act:id type="guid">47710f8d8d4b92af334eea20d252b771</act:id>
+  <act:type>EXPENSE</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:description>Bank ABC service charges</act:description>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">9c388db8647472a2e47b144fce8f5db1</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Equity</act:name>
+  <act:id type="guid">6ee79c6f395381a184075062a1608af1</act:id>
+  <act:type>EQUITY</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">d99afa236d85f45abdd0f508798c9304</act:parent>
+</gnc:account>
+<gnc:account version="2.0.0">
+  <act:name>Opening Balances</act:name>
+  <act:id type="guid">203d322f8fcf09907a4085abda503f40</act:id>
+  <act:type>EQUITY</act:type>
+  <act:commodity>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </act:commodity>
+  <act:commodity-scu>100</act:commodity-scu>
+  <act:slots>
+    <slot>
+      <slot:key>color</slot:key>
+      <slot:value type="string">Not Set</slot:value>
+    </slot>
+  </act:slots>
+  <act:parent type="guid">6ee79c6f395381a184075062a1608af1</act:parent>
+</gnc:account>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">e831adfc08accc82e87eee3e7c675d9a</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-01 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:24:27 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Initial Purchase</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-01-01</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">e5bc3796e36e53df0c214c03c2567d19</split:id>
+      <split:action>Buy</split:action>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200000/100</split:value>
+      <split:quantity>1000000/10000</split:quantity>
+      <split:account type="guid">a9d4880fbc9925eea4affb883c6e33da</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">41f62958f1b1bd85b839dab5a5d81846</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200000/100</split:value>
+      <split:quantity>-200000/100</split:quantity>
+      <split:account type="guid">203d322f8fcf09907a4085abda503f40</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">3b84119031e53af5514cabb10f2253d9</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2006-03-21 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-22 07:10:04 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Sell Stock for Profit</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2006-03-21</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">9e3978ef3da6db54a64eff8a9887a161</split:id>
+      <split:memo>Net Sale</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>352500/100</split:value>
+      <split:quantity>352500/100</split:quantity>
+      <split:account type="guid">d16675160498eb6e7098073486d4ac90</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">6e08cca515de70c092487442f1f18f4e</split:id>
+      <split:memo>Profit</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>160000/100</split:value>
+      <split:quantity>0/10000</split:quantity>
+      <split:account type="guid">a9d4880fbc9925eea4affb883c6e33da</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">57dfebfef5823cb029152207b3573807</split:id>
+      <split:memo>Broker Commission</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>7500/100</split:value>
+      <split:quantity>7500/100</split:quantity>
+      <split:account type="guid">09b82aa022c0421d609f3e681825741d</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">bc713c2062edc7cd7822d8cc53fe4c07</split:id>
+      <split:memo>Gross Sale</split:memo>
+      <split:action>Sell</split:action>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-360000/100</split:value>
+      <split:quantity>-1000000/10000</split:quantity>
+      <split:account type="guid">a9d4880fbc9925eea4affb883c6e33da</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">7cba1d14d8d77744a689392048819b9b</split:id>
+      <split:memo>Cap Gain (Long)</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-160000/100</split:value>
+      <split:quantity>-160000/100</split:quantity>
+      <split:account type="guid">d341a012bef88b9e5e695be7eeefc053</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">b653254da0eea8c7294f174f35e8c7de</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-03-01 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:28:02 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Initial IBM Purchase</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-03-01</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">f08422788057095359d956beafbdd2d1</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>400000/100</split:value>
+      <split:quantity>414078/10000</split:quantity>
+      <split:account type="guid">de3531065d28505c212ee223bda116aa</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">c0ac19db87a236f21da2f06e41374d49</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>10000/100</split:value>
+      <split:quantity>10000/100</split:quantity>
+      <split:account type="guid">09b82aa022c0421d609f3e681825741d</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">65b79da38293b7fba078653372289a1a</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-410000/100</split:value>
+      <split:quantity>-410000/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">4b62240993333518b3bfd0decfe74bdd</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2006-03-21 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-22 08:06:51 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Sell at Loss</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2006-03-21</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">c63eb2ace5b20356875c3301eec96729</split:id>
+      <split:memo>Net Sale</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>455838/100</split:value>
+      <split:quantity>455838/100</split:quantity>
+      <split:account type="guid">d16675160498eb6e7098073486d4ac90</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">c332fc37d4087a17dc677c79408c8ec4</split:id>
+      <split:memo>Broker Commission</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>10000/100</split:value>
+      <split:quantity>10000/100</split:quantity>
+      <split:account type="guid">09b82aa022c0421d609f3e681825741d</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">d94f4cc27232cf29eb43f56b913428a0</split:id>
+      <split:memo>Cap Gain (Long) (Loss)</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>34162/100</split:value>
+      <split:quantity>34162/100</split:quantity>
+      <split:account type="guid">aa3e22d3a41377cc8c96619fedb6800f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">0984958167c1e881562466afafbb9ae5</split:id>
+      <split:memo>Loss</split:memo>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-34162/100</split:value>
+      <split:quantity>0/10000</split:quantity>
+      <split:account type="guid">de3531065d28505c212ee223bda116aa</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">cdf29a03048b1c5c53a9d3838a764899</split:id>
+      <split:memo>Gross Sale</split:memo>
+      <split:action>Sell</split:action>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-465838/100</split:value>
+      <split:quantity>-517598/10000</split:quantity>
+      <split:account type="guid">de3531065d28505c212ee223bda116aa</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">c7542d4f05042692c7f1d1d386da98c7</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-01 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-14 13:28:01 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Purchase CD</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-01-01</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">c84b93d4a6001c89aca1b4ff6ab378bd</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>500000/100</split:value>
+      <split:quantity>500000/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">64c56e6ad2411869a35fa38c30413ac3</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-500000/100</split:value>
+      <split:quantity>-500000/100</split:quantity>
+      <split:account type="guid">d16675160498eb6e7098073486d4ac90</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">9e1eed9745db4533c0d08d94a047ae40</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-31 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:46:59 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-01-31</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">b946823d1d801a0818eca956b682cd36</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>833/100</split:value>
+      <split:quantity>833/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">6052942d18390b5de5f4b94cf312ccb8</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-833/100</split:value>
+      <split:quantity>-833/100</split:quantity>
+      <split:account type="guid">3f06ed2ecfbbf86822c84be472b23d59</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">547798354361c7236c81c592a5124f28</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-02-28 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:47:12 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-02-28</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">850aa3874210c2f8c14b3197c4f021e5</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>835/100</split:value>
+      <split:quantity>835/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">8036768cac8793c3c94fc74cc51df30f</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-835/100</split:value>
+      <split:quantity>-835/100</split:quantity>
+      <split:account type="guid">3f06ed2ecfbbf86822c84be472b23d59</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">b89846f3110f65c97f73adec606f8c32</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-03-31 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:47:31 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-03-31</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">79b351d37abb158af4ef4db58540a9ae</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>836/100</split:value>
+      <split:quantity>836/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">a280b9bc07df21122bc109f85b6d5ae1</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-836/100</split:value>
+      <split:quantity>-836/100</split:quantity>
+      <split:account type="guid">3f06ed2ecfbbf86822c84be472b23d59</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">6a26df6674d66c40382a094be8f1b671</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-04-30 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:47:44 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-04-30</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">64132500ad8d6bf28591d6b8ab0c2d45</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>838/100</split:value>
+      <split:quantity>838/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">aef42174f52de7b9a2b1eda037cd30a7</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-838/100</split:value>
+      <split:quantity>-838/100</split:quantity>
+      <split:account type="guid">3f06ed2ecfbbf86822c84be472b23d59</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">5fdb5d7c8a9dd71568852c71ebf574fa</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-05-31 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:48:07 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-05-31</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">bcf513057703281b45975f7d6d979048</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>839/100</split:value>
+      <split:quantity>839/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">a0f4ddc76e46c9d8130a8a982de9ac57</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-839/100</split:value>
+      <split:quantity>-839/100</split:quantity>
+      <split:account type="guid">3f06ed2ecfbbf86822c84be472b23d59</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">4b875c21a637d20a944e12f22b39e1f1</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-06-30 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:48:21 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-06-30</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">6b9507df6c6de463275108195e17fa10</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>840/100</split:value>
+      <split:quantity>840/100</split:quantity>
+      <split:account type="guid">c93de6e4c06972b1565e37b6d8b27e34</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">44a89559dd6fad8798d9ecaf20edbbc4</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-840/100</split:value>
+      <split:quantity>-840/100</split:quantity>
+      <split:account type="guid">3f06ed2ecfbbf86822c84be472b23d59</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">1c92ff9968f3ea3295f827204c527cdb</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-01 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-14 13:30:20 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Savings</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-01-01</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">79c7c002243afc5b8b6d54a284839f5e</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>500000/100</split:value>
+      <split:quantity>500000/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">188c5844d44a047bd9a6ee1bf765d29c</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-500000/100</split:value>
+      <split:quantity>-500000/100</split:quantity>
+      <split:account type="guid">d16675160498eb6e7098073486d4ac90</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">43c57d608d26ef2b0ac306091817eea9</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-30 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:59:03 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Charges</trn:description>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">2205e7714d0a21557e4c21a37579452b</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200/100</split:value>
+      <split:quantity>200/100</split:quantity>
+      <split:account type="guid">47710f8d8d4b92af334eea20d252b771</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">d74a3c4c874f362ecccb1908960d0900</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200/100</split:value>
+      <split:quantity>-200/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">1c86fb3a2421898197794966d9bbfde1</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-31 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:58:28 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-01-31</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">3fc0625d99d666172755cc07ae8f1485</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>417/100</split:value>
+      <split:quantity>417/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">e328cec1b51b7cadfd802fe9167a5da5</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-417/100</split:value>
+      <split:quantity>-417/100</split:quantity>
+      <split:account type="guid">73c88866a9713f4d852208bebbcd3f49</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">57dc67cbc41fdf01e3ca57a31507a03b</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-02-27 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:59:28 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Charges</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">9c881749cee810f3825ed63686e7bea9</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200/100</split:value>
+      <split:quantity>200/100</split:quantity>
+      <split:account type="guid">47710f8d8d4b92af334eea20d252b771</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">d105c2b456b4083de1c8f026518d6331</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200/100</split:value>
+      <split:quantity>-200/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">763248c7cab4b2f22d02f5754a4eec21</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-02-28 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 04:59:23 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-02-28</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">9f141abcc70b02e13acdd13b4ffab5c0</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>417/100</split:value>
+      <split:quantity>417/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">47f94f446a0d7dd01840cb7d8fb18282</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-417/100</split:value>
+      <split:quantity>-417/100</split:quantity>
+      <split:account type="guid">73c88866a9713f4d852208bebbcd3f49</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">ad3b9a0e18bc62a93a71ca71ab001081</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-03-30 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:00:19 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Charges</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">94adcbef483fb19ce52e9948d4cc2917</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200/100</split:value>
+      <split:quantity>200/100</split:quantity>
+      <split:account type="guid">47710f8d8d4b92af334eea20d252b771</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">980c610d892b97aa363e6bf3fe5f92e9</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200/100</split:value>
+      <split:quantity>-200/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">64e74f862728f7eefe79b12b960743b3</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-03-31 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:00:16 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-03-31</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">af45ceb09d3c5e2b130d2ead8fe7ee88</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>417/100</split:value>
+      <split:quantity>417/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">42a29761ba573fca3cd9b3fde8378081</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-417/100</split:value>
+      <split:quantity>-417/100</split:quantity>
+      <split:account type="guid">73c88866a9713f4d852208bebbcd3f49</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">e82ab31d03c1b872a103bb85ccc215a5</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-04-29 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:00:53 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Charges</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">d0499db0f52e0d5beccd2869f0c21227</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200/100</split:value>
+      <split:quantity>200/100</split:quantity>
+      <split:account type="guid">47710f8d8d4b92af334eea20d252b771</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">0254bd96d45d09f79d6cc271f32af11e</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200/100</split:value>
+      <split:quantity>-200/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">67b32a18bd0845e96e1a8d5edfd78fec</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-04-30 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:00:48 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-04-30</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">aa3dff6cfff168b3b8f3021dd12296e9</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>417/100</split:value>
+      <split:quantity>417/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">4592218741cabec6b4711cab8b7a9c20</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-417/100</split:value>
+      <split:quantity>-417/100</split:quantity>
+      <split:account type="guid">73c88866a9713f4d852208bebbcd3f49</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">758e4cd05749d9c812059371ddfe76aa</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-05-30 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:01:02 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Charges</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">97156554bc117f5df6ec64b94d7c8972</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200/100</split:value>
+      <split:quantity>200/100</split:quantity>
+      <split:account type="guid">47710f8d8d4b92af334eea20d252b771</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">462971b280aa9cf70c7987a03b67aacb</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200/100</split:value>
+      <split:quantity>-200/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">87d696790a30bb83a461b0bbdabaa9ba</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-05-31 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:00:59 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-05-31</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">8d801be70876c513288d6b2dd4688ad3</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>417/100</split:value>
+      <split:quantity>417/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">139bfa2840934d00df3f1bb5ed14f996</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-417/100</split:value>
+      <split:quantity>-417/100</split:quantity>
+      <split:account type="guid">73c88866a9713f4d852208bebbcd3f49</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">c5eb5ecc40328b66df985d80929e732f</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-06-29 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:01:17 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Charges</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">0369aa1c53434c2f27f9794b533fdcfd</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>200/100</split:value>
+      <split:quantity>200/100</split:quantity>
+      <split:account type="guid">47710f8d8d4b92af334eea20d252b771</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">a2dd26271fb10529951d7b916167a210</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-200/100</split:value>
+      <split:quantity>-200/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">0f12ba7e1617ae0ebc62f6d589224a05</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-06-30 03:59:00 -0700</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-15 05:01:14 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Interest</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-06-30</gdate>
+      </slot:value>
+    </slot>
+    <slot>
+      <slot:key>notes</slot:key>
+      <slot:value type="string"></slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">06a585135e3f7ed4b8271d1f91ead6f1</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>418/100</split:value>
+      <split:quantity>418/100</split:quantity>
+      <split:account type="guid">85c48a42aff46f6b92e34dc5a6b74d8f</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">fe878ded21ccd4a10a41bee94d26ec70</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-418/100</split:value>
+      <split:quantity>-418/100</split:quantity>
+      <split:account type="guid">73c88866a9713f4d852208bebbcd3f49</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+<gnc:transaction version="2.0.0">
+  <trn:id type="guid">f4fe8dfef70209d0283a0b47e88e23bf</trn:id>
+  <trn:currency>
+    <cmdty:space>CURRENCY</cmdty:space>
+    <cmdty:id>USD</cmdty:id>
+  </trn:currency>
+  <trn:date-posted>
+    <ts:date>2005-01-01 02:59:00 -0800</ts:date>
+  </trn:date-posted>
+  <trn:date-entered>
+    <ts:date>2013-12-14 13:27:32 -0800</ts:date>
+  </trn:date-entered>
+  <trn:description>Opening balance</trn:description>
+  <trn:slots>
+    <slot>
+      <slot:key>date-posted</slot:key>
+      <slot:value type="gdate">
+        <gdate>2005-01-01</gdate>
+      </slot:value>
+    </slot>
+  </trn:slots>
+  <trn:splits>
+    <trn:split>
+      <split:id type="guid">a93eae7bde35435539a75e3572e0563e</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>1000000/100</split:value>
+      <split:quantity>1000000/100</split:quantity>
+      <split:account type="guid">d16675160498eb6e7098073486d4ac90</split:account>
+    </trn:split>
+    <trn:split>
+      <split:id type="guid">f70a32a6aea9126a00426ab033551f07</split:id>
+      <split:reconciled-state>n</split:reconciled-state>
+      <split:value>-1000000/100</split:value>
+      <split:quantity>-1000000/100</split:quantity>
+      <split:account type="guid">203d322f8fcf09907a4085abda503f40</split:account>
+    </trn:split>
+  </trn:splits>
+</gnc:transaction>
+</gnc:book>
+</gnc-v2>
+
+<!-- Local variables: -->
+<!-- mode: xml        -->
+<!-- End:             -->
